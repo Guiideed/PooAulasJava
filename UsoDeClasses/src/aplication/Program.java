@@ -8,24 +8,24 @@ public class Program {
 	public static void main (String[]args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		
-		Produtos produtos = new Produtos();
+	
 		
 		System.out.println("Insira os dados do produto:");
 		System.out.println("Nome :");
-		produtos.nome = sc.nextLine();
+		String nome = sc.nextLine();
 		
 		System.out.println("Insira o preco dos produtos:");
-		produtos.preco = sc.nextDouble();
+		double preco = sc.nextDouble();
 		
 		System.out.println("Insira a quantidade em estoque dos produtos:");
-		produtos.quantidade = sc.nextInt();
+		int quantidade = sc.nextInt();
+		Produtos produtos = new Produtos(nome,preco,quantidade);
 		
 		System.out.println(" ");
 		System.out.println("Os dados dos produto sao: " + produtos);
 		
 		System.out.println("Qual quantidade voce quer adicionar?: ");
-		int quantidade = sc.nextInt();
+		quantidade = sc.nextInt();
 		produtos.adicioProdutos(quantidade);
 		
 		System.out.println(" ");
