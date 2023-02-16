@@ -11,6 +11,10 @@ public class Produtos {
 		this.quantidade = quantidade;
 		
 	}
+	public Produtos(String nome, double preco) {
+		this.nome= nome;
+		this.preco = preco;
+	}
 	public double valorTotalNoEstoque() {
 		return preco * quantidade;
 	}

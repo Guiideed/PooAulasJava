@@ -17,15 +17,14 @@ public class Program {
 		System.out.println("Insira o preco dos produtos:");
 		double preco = sc.nextDouble();
 		
-		System.out.println("Insira a quantidade em estoque dos produtos:");
-		int quantidade = sc.nextInt();
-		Produtos produtos = new Produtos(nome,preco,quantidade);
+		
+		Produtos produtos = new Produtos(nome,preco);
 		
 		System.out.println(" ");
 		System.out.println("Os dados dos produto sao: " + produtos);
 		
 		System.out.println("Qual quantidade voce quer adicionar?: ");
-		quantidade = sc.nextInt();
+		int quantidade = sc.nextInt();
 		produtos.adicioProdutos(quantidade);
 		
 		System.out.println(" ");
